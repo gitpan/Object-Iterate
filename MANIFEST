@@ -1,0 +1,17 @@
+MANIFEST
+README
+Changes
+Makefile.PL
+lib/Iterate.pm
+lib/Tester.pm
+t/check_arg.t
+t/grep.t
+t/import.t
+t/iterate.t
+t/load.t
+t/map.t
+t/pod.t
+t/prereq.t
+t/test_manifest
+t/tester.t
+META.yml                                 Module meta-data (added by MakeMaker)
