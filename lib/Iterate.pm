@@ -1,4 +1,4 @@
-# $Id: Iterate.pm,v 1.4 2004/09/08 07:16:38 comdog Exp $
+# $Id: Iterate.pm,v 1.6 2005/03/12 04:23:48 comdog Exp $
 package Object::Iterate;
 use strict;
 
@@ -73,7 +73,7 @@ use Exporter;
 
 @ISA         = qw(Exporter);
 @EXPORT_OK   = qw(iterate igrep imap);
-$VERSION     = '0.51';
+$VERSION     = '0.52';
 
 %EXPORT_TAGS = (
 	all => \@EXPORT_OK,
@@ -262,7 +262,7 @@ brian d foy, C<< <bdfoy@cpan.org> >>.
 
 =head1 COPYRIGHT and LICENSE
 
-Copyright 2002 by brian d foy.
+Copyright 2002-2005, brian d foy.
 
 This software is available under the same terms as perl.
 
