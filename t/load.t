@@ -1,10 +1,19 @@
-# $Id: parse.t,v 1.2 2002/08/16 14:37:05 comdog Exp $
-BEGIN { $| = 1; print "1..2\n"; }
+# $Id: load.t,v 1.2 2002/10/22 17:00:45 comdog Exp $
 
-eval{ require Object::Iterate };
-print STDERR $@ if $@;
-print $@ ? 'not ' : '', "ok\n";
+BEGIN {
+	use File::Find::Rule;
+	@classes = map { my $x = $_;
+		$x =~ s|^blib/lib/||;
+		$x =~ s|/|::|g;
+		$x =~ s|\.pm$||;
+		$x;
+		} File::Find::Rule->file()->name( '*.pm' )->in( 'blib/lib' );
+	}
 
-eval{ require Object::Iterate::Tester };
-print STDERR $@ if $@;
-print $@ ? 'not ' : '', "ok\n";
+use Test::More tests => scalar @classes;
+	
+foreach my $class ( @classes )
+	{
+	print "bail out! $class did not compile\n" unless use_ok( $class );
+	}
+

@@ -1,23 +1,25 @@
-# $Id: parse.t,v 1.2 2002/08/16 14:37:05 comdog Exp $
-BEGIN { $| = 1; print "1..2\n"; }
-END   {print "not ok\n" unless $loaded;}
+# $Id: iterate.t,v 1.3 2002/10/22 23:58:55 comdog Exp $
+use strict;
+
+use Test::More tests => 2;
 
 use Object::Iterate qw(iterate);
-use Object::Iterate::Tester;
-$loaded = 1;
-print "ok\n";
 
-eval {
-	my $o = Object::Iterate::Tester->new();
-		
-	iterate { $_ = "$_$_" } $o;
+my $o = T->new();
+isa_ok( $o, 'T' );
+
+my @out = ();
+iterate { push @out, "$_$_" } $o;
+
+my @expected = qw( AA BB CC DD EE FF );
+
+ok( eq_array( \@out, \@expected ), 'Iterate returned the right thing' );
+
+BEGIN {
+	package T;
 	
-	my @expected = qw( AA BB CC DD EE FF );
-	
-	foreach my $i ( 0 .. $#O )
-		{
-		die unless $O[$i] eq $expected[$i];
-		}
-	};
-print STDERR $@ if $@;
-print $@ ? 'not ' : '', "ok\n";
+	sub new { bless { A => [ 'A' .. 'F' ] }, __PACKAGE__     }
+	sub __init__ { $_[0]{Pos} = 0                   }
+	sub __next__ { $_[0]{A}[ $_[0]{Pos}++ ]          }
+	sub __more__ { $_[0]{Pos} > $#{ $_[0]{A} } ? 0 : 1 }
+	}
