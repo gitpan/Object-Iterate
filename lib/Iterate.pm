@@ -1,4 +1,4 @@
-# $Id: Iterate.pm,v 1.9 2006/06/08 05:38:48 comdog Exp $
+# $Id: Iterate.pm,v 1.10 2007/01/10 04:37:00 comdog Exp $
 package Object::Iterate;
 use strict;
 
@@ -72,7 +72,7 @@ use Exporter;
 
 @ISA         = qw(Exporter);
 @EXPORT_OK   = qw(iterate igrep imap);
-$VERSION     = sprintf "%d.%02d", q$Revision: 1.9 $ =~ m/(\d+) \. (\d+)/xg;
+$VERSION     = sprintf "%d.%02d", q$Revision: 1.10 $ =~ m/(\d+) \. (\d+)/xg;
 
 %EXPORT_TAGS = (
 	all => \@EXPORT_OK,
@@ -259,11 +259,12 @@ Thanks to Slaven Rezic for adding C<__init__> support
 
 brian d foy, C<< <bdfoy@cpan.org> >>.
 
-=head1 COPYRIGHT and LICENSE
+=head1 COPYRIGHT AND LICENSE
 
-Copyright 2002-2006, brian d foy.
+Copyright (c) 2002-2007 brian d foy.  All rights reserved.
 
-This software is available under the same terms as perl.
+This program is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself.
 
 =cut
 

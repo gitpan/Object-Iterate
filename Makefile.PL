@@ -1,4 +1,4 @@
-# $Id: Makefile.PL,v 1.4 2006/01/28 18:34:17 comdog Exp $
+# $Id: Makefile.PL,v 1.5 2007/01/10 04:37:00 comdog Exp $
 use ExtUtils::MakeMaker;
 
 eval "use Test::Manifest 1.14";
@@ -7,6 +7,7 @@ WriteMakefile
 	(
 	'NAME'           => 'Object::Iterate',
 	'VERSION_FROM'   => 'lib/Iterate.pm',
+	'LICENSE'       => 'perl',
 	'PM'             => {
 		'lib/Iterate.pm'    => '$(INST_LIBDIR)/Iterate.pm',
 		'lib/Tester.pm'     => '$(INST_LIBDIR)/Iterate/Tester.pm',
