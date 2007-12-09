@@ -1,4 +1,4 @@
-# $Id: iterate.t,v 1.3 2002/10/22 23:58:55 comdog Exp $
+# $Id: iterate.t 534 2002-10-22 23:58:55Z comdog $
 use strict;
 
 use Test::More tests => 2;

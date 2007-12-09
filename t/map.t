@@ -1,4 +1,4 @@
-# $Id: map.t,v 1.2 2002/10/22 18:07:09 comdog Exp $
+# $Id: map.t 522 2002-10-22 18:07:09Z comdog $
 
 use Test::More tests => 2;
 

@@ -1,10 +1,10 @@
 Changes
+examples/README
 lib/Iterate.pm
 lib/Tester.pm
 LICENSE
 Makefile.PL
 MANIFEST
-META.yml			Module meta-data (added by MakeMaker)
 README
 t/check_arg.t
 t/final.t
@@ -19,3 +19,4 @@ t/pod_coverage.t
 t/prereq.t
 t/test_manifest
 t/tester.t
+META.yml                                 Module meta-data (added by MakeMaker)

@@ -1,4 +1,4 @@
-# $Id: check_arg.t,v 1.2 2002/10/22 18:07:09 comdog Exp $
+# $Id: check_arg.t 522 2002-10-22 18:07:09Z comdog $
 
 use Test::More tests => 6;
 

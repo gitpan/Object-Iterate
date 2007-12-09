@@ -1,4 +1,4 @@
-# $Id: final.t,v 1.2 2002/10/22 19:35:35 comdog Exp $
+# $Id: final.t 527 2002-10-22 19:35:35Z comdog $
 use strict;
 
 use Test::More tests => 2;

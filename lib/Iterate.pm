@@ -1,6 +1,9 @@
-# $Id: Iterate.pm,v 1.10 2007/01/10 04:37:00 comdog Exp $
+# $Id: Iterate.pm 2457 2007-12-09 07:01:01Z comdog $
 package Object::Iterate;
 use strict;
+
+use warnings;
+no warnings;
 
 use subs qw(_check_object);
 use vars qw(@ISA $VERSION @EXPORT_OK %EXPORT_TAGS
@@ -72,7 +75,7 @@ use Exporter;
 
 @ISA         = qw(Exporter);
 @EXPORT_OK   = qw(iterate igrep imap);
-$VERSION     = sprintf "%d.%02d", q$Revision: 1.10 $ =~ m/(\d+) \. (\d+)/xg;
+$VERSION     = 1.11;
 
 %EXPORT_TAGS = (
 	all => \@EXPORT_OK,
