@@ -1,4 +1,3 @@
-# $Id: final.t 527 2002-10-22 19:35:35Z comdog $
 use strict;
 
 use Test::More tests => 2;

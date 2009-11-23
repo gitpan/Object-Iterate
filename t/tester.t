@@ -1,5 +1,3 @@
-# $Id: tester.t 522 2002-10-22 18:07:09Z comdog $
-
 use Test::More tests => 15;
 
 use Object::Iterate;

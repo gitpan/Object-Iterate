@@ -1,4 +1,3 @@
-# $Id: load.t 1463 2004-09-08 07:16:39Z comdog $
 BEGIN {
 	@classes = qw(Object::Iterate Object::Iterate::Tester);
 	}

@@ -1,4 +1,3 @@
-# $Id: Iterate.pm 2457 2007-12-09 07:01:01Z comdog $
 package Object::Iterate;
 use strict;
 
@@ -22,7 +21,7 @@ Object::Iterate - iterators for objects that know the next element
 
 	my @filtered    = igrep {...} $object;
 
-	my @transformed = imap {...} $object;
+	my @transformed = imap  {...} $object;
 
 =head1 DESCRIPTION
 
@@ -75,7 +74,7 @@ use Exporter;
 
 @ISA         = qw(Exporter);
 @EXPORT_OK   = qw(iterate igrep imap);
-$VERSION     = 1.11;
+$VERSION     = '1.12';
 
 %EXPORT_TAGS = (
 	all => \@EXPORT_OK,
@@ -102,7 +101,7 @@ sub _check_object
 
 =item iterate BLOCK, OBJECT
 
-Applies BLOCK to each item returned by C<OBJECT->__next__>.
+Applies BLOCK to each item returned by C<< OBJECT->__next__ >>.
 
 	iterate { print "$_\n" } $object;
 
@@ -138,8 +137,8 @@ sub iterate (&$)
 
 =item igrep BLOCK, OBJECT
 
-Applies BLOCK to each item returned by C<OBJECT->__next__>, and returns
-all of the elements for which the BLOCK returns TRUE.
+Applies BLOCK to each item returned by C<< OBJECT->__next__ >>, and
+returns all of the elements for which the BLOCK returns TRUE.
 
 	my $output = igrep { print "$_\n" } $object;
 
@@ -180,8 +179,9 @@ sub igrep (&$)
 
 =item imap BLOCK, OBJECT
 
-Applies BLOCK to each item returned by C<OBJECT->__next__>, and returns
-the combined lists that BLOCK returns for each of the elements.
+Applies BLOCK to each item returned by C<< OBJECT->__next__ >>, and
+returns the combined lists that BLOCK returns for each of the
+elements.
 
 	my $output = imap { print "$_\n" } $object;
 
@@ -229,26 +229,22 @@ sub imap (&$)
 =item iterate object has no C<__more__()> method at script line N
 
 You need to provide the method to let C<Object::Iterate> determine if
-more elements are available.  You don't have to call it C<__more__> if you
-change the value of C<$Object::Iterate::More>.
+more elements are available.  You don't have to call it C<__more__> if
+you change the value of C<$Object::Iterate::More>.
 
 =item iterate object has no C<__next__()> method at script line N
 
 You need to provide the method to let Object::Iterate fetch the next
-element.  You don't have to call it C<__next__> if you change the value of
-C<$Object::Iterate::Next>.
+element.  You don't have to call it C<__next__> if you change the
+value of C<$Object::Iterate::Next>.
 
 =back
 
 =head1 SOURCE AVAILABILITY
 
-This source is part of a SourceForge project which always has the
-latest sources in CVS, as well as all of the previous releases.
+This module is on Github:
 
-	http://sourceforge.net/projects/brian-d-foy/
-
-If, for some reason, I disappear from the world, one of the other
-members of the project can shepherd this module appropriately.
+	http://github.com/briandfoy/Object-Iterate
 
 =head1 TO DO
 
@@ -264,7 +260,7 @@ brian d foy, C<< <bdfoy@cpan.org> >>.
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (c) 2002-2007 brian d foy.  All rights reserved.
+Copyright (c) 2002-2009 brian d foy.  All rights reserved.
 
 This program is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.
