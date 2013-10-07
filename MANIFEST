@@ -1,6 +1,8 @@
 Changes
 examples/README
 lib/Iterate.pm
+lib/Object/Iterate.pm
+lib/Object/Iterate/Tester.pm
 lib/Tester.pm
 LICENSE
 Makefile.PL
@@ -19,4 +21,5 @@ t/pod_coverage.t
 t/prereq.t
 t/test_manifest
 t/tester.t
-META.yml                                 Module meta-data (added by MakeMaker)
+META.yml                                 Module YAML meta-data (added by MakeMaker)
+META.json                                Module JSON meta-data (added by MakeMaker)

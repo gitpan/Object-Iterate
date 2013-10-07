@@ -2,10 +2,9 @@
 	* Cleanups for the move from CVS to SVN
 	* No need to upgrade
 
-1.12 - Mon Nov 23 01:48:03 2009
-	* Fix Pod nits and update some minor distro things
-	* No code changes
-	* This module is now in Github: http://github.com/briandfoy/Object-Iterate
+1.13 - Mon Oct  7 12:14:25 2013
+	* Add Meta data, mess around with distribution file structure
+	* no code changes
 
 1.10 - Tue Jan  9 22:38:03 2007
 	* updated copyright and license info
