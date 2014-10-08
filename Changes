@@ -1,10 +1,13 @@
+# Changes for Object::Iterate
+
+1.14 - Wed Oct  8 03:38:23 2014
+	* Bump to release version
+	* Get rid of prereq test, which now happens at release time
+
+
 1.11 - Sun Dec  9 01:08:19 2007
 	* Cleanups for the move from CVS to SVN
 	* No need to upgrade
-
-1.13 - Mon Oct  7 12:14:25 2013
-	* Add Meta data, mess around with distribution file structure
-	* no code changes
 
 1.10 - Tue Jan  9 22:38:03 2007
 	* updated copyright and license info
